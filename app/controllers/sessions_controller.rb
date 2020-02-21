@@ -1,13 +1,13 @@
 class SessionsController < ApplicationController
   def new 
-     render '/login'
+     
   end 
   
   def create 
     if params[:name].empty?
-     redirect_to '/login'
-     session[:name] = params[:name]
-     binding.pry
+     redirect_to controller: 'sessions', action: 'new'
+    else
+       params[:name] = 
     end
   end 
   
