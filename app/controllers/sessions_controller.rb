@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
        redirect_to '/login'
     session[:name] = params[:name]
     binding.pry
+    end
   end 
   
   def destroy 
