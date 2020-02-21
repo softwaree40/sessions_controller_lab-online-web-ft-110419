@@ -5,9 +5,9 @@ class SessionsController < ApplicationController
   
   def create 
     if params[:name].empty?
-       redirect_to '/'
+       redirect_to '/login'
     session[:name] = params[:name]
-    
+    binding.pry
   end 
   
   def destroy 
